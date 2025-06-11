@@ -1,0 +1,40 @@
+name: Server CI/CD
+
+on:
+  push:
+    paths:
+      - 'apps/server/**'
+      # - 'packages/shared/**'
+  pull_request:
+    paths:
+      - 'apps/server/**'
+      # - 'packages/shared/**'
+
+jobs:
+  build-deploy-server:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: apps/server
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Server
+        run: npm run build
+
+      # Деплой в Docker / сервер / облако
+      # - name: Deploy to Server
+      #   run: |
+      #     docker build -t my-app-server .
+      #     docker push my-registry/my-app-server:latest
