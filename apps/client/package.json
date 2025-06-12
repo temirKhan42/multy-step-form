@@ -54,7 +54,6 @@
     "react-redux": "^9.2.0",
     "react-scripts": "^5.0.1",
     "redux": "^5.0.1",
-    "redux-devtools-extension": "^2.13.9",
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^3.1.0",
@@ -62,6 +61,7 @@
     "zod": "^3.25.51"
   },
   "devDependencies": {
+    "@redux-devtools/extension": "^3.3.0",
     "@tanstack/eslint-plugin-query": "^5.74.7",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
