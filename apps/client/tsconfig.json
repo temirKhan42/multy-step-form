@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "noEmit": true,
+    "incremental": true
+  },
+  "include": [
+    "next.config.js",
+    "**/*.ts",
+    ".eslintrc.js",
+    "**/*.tsx",
+    "./middlewares/middleware.js",
+    "containers/Auth/EcpKeyLoad/index.js",
+    "src/core/context/deferred.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
