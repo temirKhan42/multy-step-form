@@ -19,12 +19,12 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "noEmit": true,
-    "incremental": true
+    "incremental": true,
   },
   "include": [
     "next.config.js",
     "**/*.ts",
-    ".eslintrc.js",
+    "eslint.config.js",
     "**/*.tsx",
     "./middlewares/middleware.js",
     "containers/Auth/EcpKeyLoad/index.js",
