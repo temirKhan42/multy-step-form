@@ -1,13 +1,13 @@
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import { useRegister } from "..";
-import { IAddon, TUiButton, TUiInfo } from "../../../core/types";
+import { IAddon, TUiButton, TUiInfo } from "../../../core/types/register";
 import { isMobile } from "../../../core/utils";
 import StepThreeDesc from "../ui/desctop/stepThreeDesc";
 import StepThreeMob from "../ui/mobile/stepThreeMob";
 
 type Props = {
   addons: IAddon[];
-  setAddons: (val: IAddon[]) => void;
+  setAddons: (_var: IAddon[]) => void;
 }
 
 const StepThree: React.FC<Props> = ({addons, setAddons}) => {

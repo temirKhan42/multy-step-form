@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-import { TUiButton, TUiInfo } from "../../../../core/types";
+import React, { ReactNode } from "react";
+import { TUiButton, TUiInfo } from "../../../../core/types/register";
 import { colors } from "../../../../core/utils/constans";
 import { Flex, TextOffset } from "../../../../styledComponents";
 import Wraper from "./wraper";

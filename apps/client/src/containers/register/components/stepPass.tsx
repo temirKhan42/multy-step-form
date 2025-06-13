@@ -1,10 +1,11 @@
-import { TObjectKeyString, TUiButton, TUiInfo } from "../../../core/types";
+import React, { useState } from "react";
+import { TObjectKeyString } from "../../../core/types";
+import { TUiButton, TUiInfo } from "../../../core/types/register";
 import { isMobile } from "../../../core/utils";
 import { useRegister } from "..";
 import StepPassDesc from "../ui/desctop/stepPassDesc";
 import StepPassMob from "../ui/mobile/stepPassMob";
 import FormPassword from "./formPassword";
-import { useState } from "react";
 import { validatePersonInfo } from "../schema";
 
 const StepPass: React.FC = () => {

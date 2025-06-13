@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { colors } from "../../../../core/utils/constans";
 import { Flex, Text, TextOffset } from "../../../../styledComponents";
 import Wraper from "./wraper";
-import { TUiButton, TUiInfo } from "../../../../core/types";
+import { TUiButton, TUiInfo } from "../../../../core/types/register";
 
 type Props = {
   uiInfo: TUiInfo;

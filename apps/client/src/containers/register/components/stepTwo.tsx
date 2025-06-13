@@ -1,5 +1,5 @@
-import { useMemo } from "react";
-import { IPlan, TBillOption, TCard, TUiButton, TUiInfo } from "../../../core/types";
+import React, { useMemo } from "react";
+import { TBillOption, TCard, TUiButton, TUiInfo } from "../../../core/types/register";
 import { isMobile } from "../../../core/utils";
 import StepTwoDesc from "../ui/desctop/stepTwoDesc";
 import StepTwoMob from "../ui/mobile/stepTwoMob";

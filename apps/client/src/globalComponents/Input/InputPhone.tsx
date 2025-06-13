@@ -1,7 +1,7 @@
 import React, { forwardRef, InputHTMLAttributes } from "react";
 import { IMaskInput } from 'react-imask';
 import { InputBlock } from "./styled";
-import { Flex, Text, TextOffset } from "../../styledComponents";
+import { Flex, TextOffset } from "../../styledComponents";
 import { colors } from "../../core/utils/constans";
 
 type Props = InputHTMLAttributes<HTMLInputElement> & {

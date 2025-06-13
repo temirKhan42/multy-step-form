@@ -1,3 +1,4 @@
+import React from "react";
 import { colors } from "../../core/utils/constans";
 import { StepBlock, StepNum, StepsList, StepTitle } from "./styled";
 

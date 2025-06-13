@@ -1,9 +1,9 @@
-import { ReactNode, useLayoutEffect, useRef, useState } from "react";
+import React, { ReactNode, useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Container, Footer, FormBlock, StepBlock } from "./styled";
 import {Steps} from "../../../../globalComponents";
 import {Button} from "../../../../globalComponents";
-import { TUiButton } from "../../../../core/types";
+import { TUiButton } from "../../../../core/types/register";
 import { useRegister } from "../..";
 
 type Props = {

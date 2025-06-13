@@ -1,3 +1,4 @@
+import React from "react";
 import { Oval, OvalProps } from "react-loader-spinner"
 import { colors } from "../../core/utils/constans";
 

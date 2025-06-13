@@ -1,4 +1,5 @@
-import { TUiInfo } from "../../../core/types";
+import React from "react";
+import { TUiInfo } from "../../../core/types/register";
 import { isMobile } from "../../../core/utils";
 import SuccessDesc from "../ui/desctop/successDesc";
 import SuccessMob from "../ui/mobile/successMob";

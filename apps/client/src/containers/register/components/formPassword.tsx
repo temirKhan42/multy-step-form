@@ -1,5 +1,6 @@
+import React from "react";
 import { useRegister } from "..";
-import { TPerson } from "../../../core/types";
+import { TPerson } from "../../../core/types/register";
 import { InputPassword } from "../../../globalComponents";
 import { StyledForm } from "../ui/styled";
 

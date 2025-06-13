@@ -1,5 +1,5 @@
 import { api } from '.';
-import { TPerson } from '../../types';
+import { TPerson } from '../../types/register';
 
 const registerNewUserApi = api.injectEndpoints({
   endpoints: (builder) => ({

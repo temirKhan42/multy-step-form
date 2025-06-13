@@ -1,12 +1,12 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { useGetAddonnsQuery, useGetPlansQuery } from "../../core/store/api/plan";
+import { useGetAddonnsQuery } from "../../core/store/api/plan";
 import StepOne from "./components/stepOne";
 import StepTwo from "./components/stepTwo";
 import StepThree from "./components/stepThree";
 import StepFour from "./components/stepFour";
 import Success from "./components/success";
-import { IAddon, IPlan, PersonContextType, TBillPlan, TBillType, TPerson } from "../../core/types";
+import { TBillType, PersonContextType, TBillPlan, TPerson, IAddon } from '../../core/types/register'
 import StepPass from "./components/stepPass";
 
 const RegisterContext = createContext<PersonContextType | undefined>(undefined);

@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { TObjectKeyString, TUiButton, TUiInfo } from "../../../core/types";
+import React, { useState } from "react";
+import { TObjectKeyString } from "../../../core/types";
+import { TUiInfo, TUiButton } from '../../../core/types/register';
 import { isMobile } from "../../../core/utils";
 import StepOneDesc from "../ui/desctop/stepOneDesc";
 import StepOneMob from "../ui/mobile/stepOneMob";

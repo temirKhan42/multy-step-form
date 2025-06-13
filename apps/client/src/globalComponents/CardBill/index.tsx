@@ -1,8 +1,9 @@
+import React from "react";
 import Image from "next/image";
 import { CardBlock } from "./styled";
 import { Flex, Text } from "../../styledComponents";
 import { colors } from "../../core/utils/constans";
-import { TBillPlan, TCard } from "../../core/types";
+import { TBillPlan, TCard } from "../../core/types/register";
 
 type Props = {
   card: TCard;

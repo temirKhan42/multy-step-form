@@ -31,4 +31,4 @@ export function Providers({ children }: { children: ReactNode }) {
       </I18nextProvider>
     </Provider>
   );
-};
+}

@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import Image from "next/image";
 import {Steps} from "../../../../globalComponents";
 import {Button} from "../../../../globalComponents";
 import { Container, ContentBlock, Sidebar, SidebarLayout } from "./styled";
 import { Flex } from "../../../../styledComponents";
-import { TUiButton } from "../../../../core/types";
+import { TUiButton } from "../../../../core/types/register";
 import { useRegister } from "../..";
 
 type Props = {

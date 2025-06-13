@@ -1,6 +1,6 @@
-import { useRegister } from "../..";
+import React from "react";
 import { useGetAddonnsQuery } from "../../../../core/store/api/plan";
-import { IAddon, TUiButton, TUiInfo } from "../../../../core/types";
+import { IAddon, TUiButton, TUiInfo } from "../../../../core/types/register";
 import { colors } from "../../../../core/utils/constans";
 import { CardCheck, Loader } from "../../../../globalComponents";
 import { Flex, Text, TextOffset } from "../../../../styledComponents";

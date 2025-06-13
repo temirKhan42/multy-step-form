@@ -1,4 +1,4 @@
-import { ChangeEvent, useRef } from "react";
+import React, { useRef } from "react";
 import { TOption } from "../../core/types";
 import { colors } from "../../core/utils/constans";
 import { Text } from "../../styledComponents";

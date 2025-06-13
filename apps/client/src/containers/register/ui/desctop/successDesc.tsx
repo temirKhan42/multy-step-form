@@ -1,9 +1,10 @@
+import React from "react";
 import Image from "next/image";
 import { SuccessBlock } from "../styled";
 import Wraper from "./wraper";
 import { Text, TextOffset } from "../../../../styledComponents";
 import { colors } from "../../../../core/utils/constans";
-import { TUiButton, TUiInfo } from "../../../../core/types";
+import { TUiButton, TUiInfo } from "../../../../core/types/register";
 
 type Props = {
   buttons: [TUiButton|null, TUiButton|null];

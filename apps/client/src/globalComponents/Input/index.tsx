@@ -1,17 +1,15 @@
-import { forwardRef } from "react";
+import React, { forwardRef } from "react";
 import { InputBlock } from "./styled";
-import { Flex, Text, TextOffset } from "../../styledComponents";
+import { Flex, TextOffset } from "../../styledComponents";
 import { colors } from "../../core/utils/constans";
 
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
-  value: string;
   label: string;
   error?: string
 }
 
 export const InputCustom = forwardRef<HTMLInputElement, Props>(
   ({
-    value,
     label,
     id,
     type = 'text',

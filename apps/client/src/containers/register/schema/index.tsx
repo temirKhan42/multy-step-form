@@ -1,7 +1,8 @@
 'use client';
 
 import { z } from "zod";
-import { TObjectKeyString, TPerson } from "../../../core/types";
+import { TObjectKeyString } from "../../../core/types";
+import { TPerson } from '../../../core/types/register';
 
 const schemaPersonInfo = z.object({
   name: z.string({ required_error: "Name is required" }),

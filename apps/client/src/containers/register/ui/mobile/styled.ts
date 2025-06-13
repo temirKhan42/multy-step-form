@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, mediaMinWidth } from "../../../../core/utils/constans";
+import { colors } from "../../../../core/utils/constans";
 import { Flex } from "../../../../styledComponents";
 
 

@@ -1,5 +1,5 @@
 import { api } from ".";
-import { IAddon, IPlan } from "../../types";
+import { IAddon, IPlan } from "../../types/register";
 
 const plansListApi = api.injectEndpoints({
   endpoints: (builder) => ({

@@ -1,6 +1,7 @@
+import React from "react";
 import { useRegister } from "../..";
 import { useGetPlansQuery } from "../../../../core/store/api/plan";
-import { TBillOption, TBillType, TCard, TUiButton, TUiInfo } from "../../../../core/types";
+import { TBillOption, TBillType, TCard, TUiButton, TUiInfo } from "../../../../core/types/register";
 import { colors } from "../../../../core/utils/constans";
 import { CardBill, Loader, Switcher } from "../../../../globalComponents";
 import { Flex, Grid, Offset, TextOffset } from "../../../../styledComponents";

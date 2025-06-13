@@ -1,4 +1,4 @@
-import { forwardRef, useState } from "react";
+import React, { forwardRef, useState } from "react";
 import Icon from '@mdi/react';
 import { mdiEyeOutline, mdiEyeClosed } from '@mdi/js';
 import { InputBlock, ViewIcon } from "./styled";
@@ -17,7 +17,6 @@ export const InputPassword = forwardRef<HTMLInputElement, Props>(
     value,
     label,
     id,
-    type = 'password',
     withIcon = true,
     error,
     ...props

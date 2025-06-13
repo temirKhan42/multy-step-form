@@ -1,11 +1,11 @@
+import React from "react";
 import Link from "next/link";
 import { colors } from "../../../../core/utils/constans";
 import { Flex, Text, TextOffset } from "../../../../styledComponents";
 import Wraper from "./wraper";
 import { PriceBlock } from "./styled";
 import { ResultBlock } from "../styled";
-import { TUiButton, TUiInfo } from "../../../../core/types";
-import { MouseEvent } from "react";
+import { TUiButton, TUiInfo } from "../../../../core/types/register";
 
 type Props = {
   buttons: [TUiButton|null, TUiButton|null];

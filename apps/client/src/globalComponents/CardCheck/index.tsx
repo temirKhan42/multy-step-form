@@ -1,4 +1,5 @@
-import { IAddon } from "../../core/types";
+import React from "react";
+import { IAddon } from "../../core/types/register";
 import { colors } from "../../core/utils/constans";
 import { Flex, Text, TextOffset } from "../../styledComponents";
 import { CardCheckBlock } from "./styled";

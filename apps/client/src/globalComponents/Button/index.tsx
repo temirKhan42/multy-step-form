@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import { Oval } from 'react-loader-spinner';
 import { ButtonStyle } from "./styled";
 

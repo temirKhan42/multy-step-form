@@ -1,5 +1,3 @@
-export type * from './register';
-
 export type TOption = {
   label: string|number;
   value: string|number|boolean;

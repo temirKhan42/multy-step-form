@@ -1,6 +1,6 @@
-import { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useRegister } from "..";
-import { IAddon, IPlan, TUiButton, TUiInfo } from "../../../core/types";
+import { IAddon, IPlan, TUiButton, TUiInfo } from "../../../core/types/register";
 import { isMobile } from "../../../core/utils";
 import StepFourDesc from "../ui/desctop/stepFourDesc";
 import StepFourMob from "../ui/mobile/stepFourMob";
