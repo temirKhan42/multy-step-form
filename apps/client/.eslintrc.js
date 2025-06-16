@@ -11,7 +11,6 @@ module.exports = {
   },
   ignorePatterns: [
     "node_modules/", "out/", 
-    "src/Containers/auth/registration/components/EcpKeyLoad.js", 
     "public/", "next.config.js"
   ],
   env: {
@@ -28,8 +27,8 @@ module.exports = {
   rules: {
     "camelcase": "error",
     "react/jsx-pascal-case": "error",
-    "@typescript-eslint/no-explicit-any": "off",
-    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react-hooks/exhaustive-deps": "warn",
     "semi": "warn",
     "no-multiple-empty-lines": "error",
     "no-extra-semi": "error",
