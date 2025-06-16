@@ -6,7 +6,6 @@ import { Flex, TextOffset } from "../../styledComponents";
 import { colors } from "../../core/utils/constans";
 
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
-  value: string;
   label: string;
   error?: string;
   withIcon?: boolean;
@@ -14,7 +13,6 @@ type Props = React.InputHTMLAttributes<HTMLInputElement> & {
 
 export const InputPassword = forwardRef<HTMLInputElement, Props>(
   ({
-    value,
     label,
     id,
     withIcon = true,

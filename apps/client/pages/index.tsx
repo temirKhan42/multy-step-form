@@ -7,10 +7,10 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    if (router) {
+    if (router.asPath === '/') {
       router.replace('/register?step=1');
     }
-  }, []);
+  }, [router]);
 
   return (
     <div>

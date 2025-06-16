@@ -1,10 +1,12 @@
-/** @type {import('next').NextConfig} */
-const runtimeCaching = require("next-pwa/cache");
+import runtimeCaching from 'next-pwa/cache.js';
+import withPWA from 'next-pwa';
+
 const isDev = process.env.NAME === 'development' || process.env.NAME === 'local';
 
-const withPWA = require("next-pwa")({
-  dest: "public",
+const pwa = withPWA({
+  dest: 'public',
   disable: isDev,
+  buildExcludes: [/.*dynamic-css-manifest\.json$/],
   register: true,
   skipWaiting: true,
   scope: '/',
@@ -18,8 +20,8 @@ const nextConfig = {
   transpilePackages: ['antd'],
   env: {
     NAME: process.env.NAME,
-    BASE_URL: process.env.BASE_URL,
-  },
+    BASE_URL: process.env.BASE_URL
+  }
 };
 
-module.exports = isDev ? nextConfig : withPWA(nextConfig);
+export default isDev ? nextConfig : pwa(nextConfig);
