@@ -5,6 +5,14 @@ import { PORT } from "./config/dotenv.config.js";
 import logger from "./utils/logger.js";
 import { disconnectDB } from "./config/mongo.config.js";
 
+import os from 'os';
+import dns from 'dns';
+
+dns.lookup(os.hostname(), (err, address) => {
+  console.log('🚀 Railway server IP:', address);
+});
+
+
 const app = createApp();
 
 // const server = https
