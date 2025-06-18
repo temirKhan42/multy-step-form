@@ -8,11 +8,16 @@ const __dirname = path.dirname(__filename);
 
 const logger = {
   log: (message: string) => {
-    if (NODE_ENV === 'development') {
-      const logPath = path.join(__dirname, LOG_PATH_FROM_UTILS_LOGGER);
-      fs.appendFileSync(logPath, `${new Date().toISOString()} ${message}\n`);
-    } else {
-      console.log(`${new Date().toISOString()} ${message}\n`);
+    try {
+      if (NODE_ENV === 'development') {
+        console.log(LOG_PATH_FROM_UTILS_LOGGER);
+        const logPath = path.join(__dirname, LOG_PATH_FROM_UTILS_LOGGER);
+        fs.appendFileSync(logPath, `${new Date().toISOString()} ${message}\n`);
+      } else {
+        console.log(`${new Date().toISOString()} ${message}\n`);
+      }
+    } catch (err) {
+      console.log(err);
     }
   } 
 };
