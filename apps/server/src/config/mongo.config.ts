@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import '../utils/mongoosePlugins';
+import '../utils/mongoosePlugins.js';
 import logger from '../utils/logger.js';
 import { MONGO_URI, NODE_ENV } from './dotenv.config.js';
 

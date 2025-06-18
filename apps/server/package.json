@@ -4,10 +4,10 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "prod": "cross-env NODE_ENV=production tsx src/server.ts",
-    "dev": "cross-env NODE_ENV=development tsx watch src/server.ts",
     "build:dev": "npm run clean && tsc -p config/tsconfig.dev.json",
+    "dev": "cross-env NODE_ENV=development tsx watch src/server.ts",
     "build:prod": "npm run clean && tsc -p config/tsconfig.prod.json",
+    "prod": "cross-env NODE_ENV=production tsx src/server.ts",
     "serve": "node dist/server.js"
   },
   "keywords": [],

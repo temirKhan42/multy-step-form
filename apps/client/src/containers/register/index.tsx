@@ -20,7 +20,6 @@ const Register: React.FC = () => {
   const [addons, setAddons] = useState<IAddon[]>([]);
 
   useEffect(() => {
-    console.log('test ci/cd');
     setAddons(addonns ? addonns.data : []);
   }, [addonns]);
 
