@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 const logger = {
   log: (message: string) => {
-    const logPath = path.join(__dirname, LOG_PATH_FROM_UTILS_LOGGER);
+    const logPath = path.join(__dirname, '../../logs/app.log');
     fs.appendFileSync(logPath, `${new Date().toISOString()} ${message}\n`);
   } 
 };
