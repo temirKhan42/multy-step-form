@@ -1,4 +1,4 @@
-import { CLIENT_ORIGIN } from "./dotenv.config";
+import { CLIENT_ORIGIN } from "./dotenv.config.js";
 
 const getCorsConfig = () => {
   const allowedOrigins = [
