@@ -10,6 +10,7 @@ import authRouter from "./routes/auth.route.js";
 import protectedRouter from "./routes/protected.route.js";
 import { connectDB } from "./config/mongo.config.js";
 import planRouter from "./routes/plan.route.js";
+import getCorsConfig from "./config/cors.config.js";
 
 const createApp = (): Express => {
   const app = express();
@@ -20,24 +21,7 @@ const createApp = (): Express => {
 
   app.use(helmet(helmetConfig));
 
-  const allowedOrigins = [
-    "http://localhost:3000",
-    "https://multy-step-form-ckoppcefb-temirkhan42s-projects.vercel.app"
-  ];
-
-  app.use(cors({
-    origin: function (origin, callback) {
-      // Разрешаем запросы без origin (например, из Postman)
-      if (!origin) return callback(null, true);
-
-      if (allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error(`Not allowed by CORS: ${origin}`));
-      }
-    },
-    credentials: true
-  }));
+  app.use(cors(getCorsConfig()));
 
   app.use(securityMiddleware);
 

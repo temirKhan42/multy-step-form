@@ -17,3 +17,4 @@ export const ACCESS_EXPIRES_MSEC = 15*60*1000;
 export const REFRESH_EXPIRES_MSEC = 7*24*60*60*1000;
 export const COOKIE_SECRET = process.env.COOKIE_SECRET!;
 export const LOG_PATH_FROM_UTILS_LOGGER = process.env.LOG_PATH_FROM_UTILS_LOGGER!;
+export const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN!;
