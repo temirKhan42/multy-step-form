@@ -20,7 +20,10 @@ const createApp = (): Express => {
 
   app.use(helmet(helmetConfig));
 
-  app.use(cors({origin: "http://localhost:3000"}));
+  app.use(cors({origin: [
+    "http://localhost:3000",
+    "https://multy-step-form-ckoppcefb-temirkhan42s-projects.vercel.app/"
+  ]}));
 
   app.use(securityMiddleware);
 
