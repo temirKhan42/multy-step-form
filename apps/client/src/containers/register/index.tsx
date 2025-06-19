@@ -14,9 +14,9 @@ const RegisterContext = createContext<PersonContextType | undefined>(undefined);
 const Register: React.FC = () => {
   const router = useRouter();
   const stepsList = ['your info', 'password', 'select plan', 'add-ons', 'summary'];
+  const { data: addonns } = useGetAddonnsQuery();
   const stepFromQuery = parseInt(router.query.step as string) || 1;
   const [personInfo, setPersonInfo] = useState<TPerson>({'billPlan': 'arcade', billType: 'per-month'});
-  const { data: addonns } = useGetAddonnsQuery();
   const [addons, setAddons] = useState<IAddon[]>([]);
 
   useEffect(() => {
