@@ -31,7 +31,7 @@ jobs:
         run: npm ci
 
       - name: Build Server
-        run: npm run build
+        run: npm run build:prod
 
       # Деплой в Docker / сервер / облако
       # - name: Deploy to Server
