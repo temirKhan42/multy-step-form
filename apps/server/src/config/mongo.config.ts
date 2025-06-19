@@ -46,6 +46,7 @@ export const connectDB = async (): Promise<void> => {
       maxPoolSize: 10, // Максимальное количество соединений в пуле
       socketTimeoutMS: 45000, // Таймаут сокета
       serverSelectionTimeoutMS: 5000, // Таймаут выбора сервера
+      dbName: "myapp-dev"
     });
 
     logger.log(`MongoDB connected to: ${mongoose.connection.host}`);
