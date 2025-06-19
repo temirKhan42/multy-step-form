@@ -9,7 +9,7 @@ on:
       - 'apps/client/**'
 
 env:
-  NODE_VERSION: 23.11.0 # 20.13.1  # Рекомендуемая LTS версия (ваша 23.11.0 не поддерживается Vercel)
+  NODE_VERSION: 20.13.1  # Рекомендуемая LTS версия (ваша 23.11.0 не поддерживается Vercel)
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
   # VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -32,6 +32,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
+          cache-dependency-path: apps/client/package-lock.json
 
       - name: Install dependencies
         run: npm install
