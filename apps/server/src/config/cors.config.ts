@@ -2,7 +2,8 @@ import { CLIENT_ORIGIN } from "./dotenv.config.js";
 
 const getCorsConfig = () => {
   const allowedOrigins = [
-    CLIENT_ORIGIN
+    CLIENT_ORIGIN,
+    'http://localhost:3000'
   ];
 
   return {
