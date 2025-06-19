@@ -21,6 +21,7 @@ const StepTwo: React.FC = () => {
     if (personInfo.billType && billPlans?.data) {
       return billPlans.data
         .filter((card) => card.billType === personInfo.billType)
+        .sort((card1, card2) => card1.price > card2.price ? 1 : -1)
         .map((card) => {
           return {
             ...card,

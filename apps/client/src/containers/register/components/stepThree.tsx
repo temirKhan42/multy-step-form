@@ -16,9 +16,11 @@ const StepThree: React.FC<Props> = ({addons, setAddons}) => {
 
   const addonCards: IAddon[] = useMemo(() => {
     if (personInfo.billType && addons) {
-      return addons.filter((addon) => {
-        return addon.billType === personInfo.billType;
-      });
+      return addons
+        .filter((addon) => {
+          return addon.billType === personInfo.billType;
+        })
+        .sort((addon1, addon2) => addon1.price > addon2.price ? 1 : -1);
     } else {
       return [];
     }

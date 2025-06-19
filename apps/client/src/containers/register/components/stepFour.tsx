@@ -96,12 +96,14 @@ const StepFour: React.FC<Props> = ({ addons }) => {
     "planPrice": `${selectedPlan?.price}/${isPerMonth ? "mo" : "yr"}`,
     "totalTitle": `Total (per ${isPerMonth ? "month" : "year"})`,
     "totalPrice": `+${selctedAddonSumm+(selectedPlan?.price || 0)}/${isPerMonth ? "mo" : "yr"}`,
-    "selected": selectedAddons.map((addon) => {
-      return {
-        "selectedTitle": addon.title || '', 
-        "selectePrice": `+${addon.price}/${isPerMonth ? "mo" : "yr"}`
-      };
-    })
+    "selected": selectedAddons
+      .sort((addon1, addon2) => addon1.price > addon2.price ? 1 : -1)
+      .map((addon) => {
+        return {
+          "selectedTitle": addon.title || '', 
+          "selectePrice": `+${addon.price}/${isPerMonth ? "mo" : "yr"}`
+        };
+      })
   };
 
   return (
