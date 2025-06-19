@@ -1,10 +1,11 @@
-import React, { ReactNode, useLayoutEffect, useRef, useState } from "react";
+import React, { ReactNode } from "react";
 import Image from "next/image";
 import { Container, Footer, FormBlock, StepBlock } from "./styled";
 import {Steps} from "../../../../globalComponents";
 import {Button} from "../../../../globalComponents";
 import { TUiButton } from "../../../../core/types/register";
 import { useRegister } from "../..";
+import useElementHeight from "../../../../core/hooks/useElementHeight";
 
 type Props = {
   buttons: [TUiButton|null, TUiButton|null];
@@ -17,15 +18,8 @@ const Wraper: React.FC<Props> = ({
   children,
   currentStep
 }) => {
-  const formRef = useRef<HTMLDivElement>(null);
-  const { stepsList, step } = useRegister();
-  const [formHeight, setFormHeight] = useState(200);
-
-  useLayoutEffect(() => {
-    if (formRef.current) {
-      setFormHeight(formRef.current.offsetHeight);
-    }
-  }, []);
+  const { stepsList, step, } = useRegister();
+  const { ref: formRef, height: formHeight } = useElementHeight<HTMLDivElement>(200);
 
   return (
     <Container formheight={`${formHeight}`}>
