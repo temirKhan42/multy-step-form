@@ -4,14 +4,12 @@ on:
   push:
     paths:
       - 'apps/client/**'
-      # - 'packages/shared/**'
   pull_request:
     paths:
       - 'apps/client/**'
-      # - 'packages/shared/**'
 
 env:
-  NODE_VERSION: 20.13.1  # Рекомендуемая LTS версия (ваша 23.11.0 не поддерживается Vercel)
+  NODE_VERSION: 23.11.0 # 20.13.1  # Рекомендуемая LTS версия (ваша 23.11.0 не поддерживается Vercel)
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
   # VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -44,21 +42,21 @@ jobs:
       # - name: Run tests
       #   run: npm test
 
-      - name: Build Client
-        run: |
-          if [ "${{ github.ref }}" == "refs/heads/main" ]; then
-            npm run build:prod
-          elif [ "${{ github.ref }}" == "refs/heads/dev" ]; then
-            npm run build:dev
-          else
-            npm run build:local
-          fi
+      # - name: Build Client
+      #   run: |
+      #     if [ "${{ github.ref }}" == "refs/heads/main" ]; then
+      #       npm run build:prod
+      #     elif [ "${{ github.ref }}" == "refs/heads/dev" ]; then
+      #       npm run build:dev
+      #     else
+      #       npm run build:local
+      #     fi
         
-      - name: Install Vercel CLI
-        run: npm install -g vercel@latest
+      # - name: Install Vercel CLI
+      #   run: npm install -g vercel@latest
 
-      - name: Deploy to Vercel
-        run: |
-          vercel deploy --prod --token=${{ env.VERCEL_TOKEN }} \
-          --project=${{ env.VERCEL_PROJECT_ID }}
+      # - name: Deploy to Vercel
+      #   run: |
+      #     vercel deploy --prod --token=${{ env.VERCEL_TOKEN }} \
+      #     --project=${{ env.VERCEL_PROJECT_ID }}
         # --scope=${{ env.VERCEL_ORG_ID }} \
