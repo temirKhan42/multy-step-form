@@ -4,11 +4,11 @@ on:
   push:
     paths:
       - 'apps/server/**'
-      # - 'packages/shared/**'
+      - '.github/**'
   pull_request:
     paths:
       - 'apps/server/**'
-      # - 'packages/shared/**'
+      - '.github/**'
 
 jobs:
   build-deploy-server:

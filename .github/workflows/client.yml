@@ -4,9 +4,11 @@ on:
   push:
     paths:
       - 'apps/client/**'
+      - '.github/**'
   pull_request:
     paths:
       - 'apps/client/**'
+      - '.github/**'
 
 env:
   NODE_VERSION: 20.13.1  # Рекомендуемая LTS версия (ваша 23.11.0 не поддерживается Vercel)
