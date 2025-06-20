@@ -2,7 +2,7 @@
 # Multy-Step Form Application
 
 This is a **fullstack monorepo application** with a **Next.js client** and **Node.js server** powered by **TypeScript**.  
-It includes clear environment separation, typed logic, modular architecture, and production-ready configurations. This application serves as an example of an architectural solution option. 
+It includes clear environment separation, typed logic, modular architecture, and production-ready configurations. This application serves as an example of an architectural solution option presented in the form of a multi-step registration form. 
 
 ---
 
