@@ -12,7 +12,7 @@ registerLocale('ru', ru);
 
 const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
-    const isProduction = process.env.NAME !== 'development';
+    const isProduction = process.env.NAME === 'production';
     if (isProduction) {
       navigator.serviceWorker.register('/service-worker.js');
     }

@@ -1,7 +1,7 @@
 import runtimeCaching from 'next-pwa/cache.js';
 import withPWA from 'next-pwa';
 
-const isDev = process.env.NAME === 'development' || process.env.NAME === 'local';
+const isDev = process.env.NAME !== 'production';
 
 const pwa = withPWA({
   dest: 'public',
